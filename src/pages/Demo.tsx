@@ -17,15 +17,15 @@ const Demo = ({ language }: Props) => {
 				<p>
 					{language === "es"
 						? "Los siguientes ejemplos han sido desarrollados en base a ejercicios de la web Front End Mentor. Si bien los diseños son obtenidos de esa web, y como verán el código está en inglés (refiriéndome principalmente las clases y los nombres de las funciones), todo ello fue escrito por mi. Esto se debe a que los cursos que he hecho siempre fueron en inglés, y dado que los tags de los elementos están en inglés, me acostumbré a escribir el resto del código tabién de esa manera."
-						: "The following examples have been developed based on exercises from the Front End Mentor website. Although the designs are obtained from that website, and as you will see, the code is in English (referring mainly to the classes and function names), all of it was written by me. This is because the courses I have taken have always been in English, and since the tags of the elements are in English, I got used to writing the rest of the code in the same way."}
+						: "The following examples have been developed based on exercises from the Front End Mentor website. Although the designs are obtained from that website, and as you will see the code is in English (referring mainly to the classes and function names), all of it was written by me. This is because the courses I have taken have always been in English, and since the tags of the elements are in English, I got used to writing the rest of the code in the same way."}
 				</p>
 			</div>
 			<WebExample
 				title="• URL Shortening App"
 				description={
 					language === "es"
-						? "Reproducción en React de una aplicación de reducción de URL. La funcionabilidad está implementada pero puede que los permisos de la API no estén funcionales."
-						: "Reproduction in React of a URL shortening app. The functionality is implemented, but the API permissions may not be functional."
+						? "Reproducción en React de una aplicación de reducción de URL. La funcionabilidad está implementada pero puede que los permisos de la API no estén activos."
+						: "Reproduction in React of a URL shortening app. The functionality is implemented, but the API permissions may not be active."
 				}
 				github="https://github.com/federuttkay/react_url-shortening-app"
 				image={imgUrlShortening}
