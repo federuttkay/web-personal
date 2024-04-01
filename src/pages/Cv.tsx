@@ -1,11 +1,14 @@
 import cv from "/public/CV.pdf";
 
-const Cv = () => {
+interface Props {
+	language: string;
+}
+const Cv = ({ language }: Props) => {
 	return (
 		<main className="grid">
-			<h1>Currículum Vitae</h1>
+			<h1>{language === "es" ? "Currículum Vitae" : "Curriculum Vitae"}</h1>
 			<a href={cv} className="link" download="CV - Federico Ruttkay.pdf">
-				Descargar mi CV
+				{language === "es" ? "Descargar mi CV" : "Download my CV"}
 			</a>
 		</main>
 	);

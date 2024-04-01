@@ -119,6 +119,11 @@ p a {
 	background-color: var(--clr-accent-light);
 }
 
+.page-error {
+	margin-block: 7rem;
+	text-align: center;
+}
+
 @media screen and (width > 800px) {
 	main {
 		margin-top: 5rem;

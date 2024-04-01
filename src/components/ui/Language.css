@@ -1,0 +1,14 @@
+.language-bar {
+	padding-top: 5px;
+	font-size: 0.8rem;
+	text-align: end;
+}
+
+.lang-option {
+	cursor: pointer;
+	transition: color 200ms;
+}
+
+.lang-selected {
+	color: var(--clr-accent-dark);
+}

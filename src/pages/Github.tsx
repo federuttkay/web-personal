@@ -1,4 +1,8 @@
-const Github = () => {
+interface Props {
+	language: string;
+}
+
+const Github = ({ language }: Props) => {
 	return (
 		<main className="grid">
 			<h1>GitHub</h1>
@@ -8,7 +12,9 @@ const Github = () => {
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				Mis repositorios en GitHub
+				{language === "es"
+					? "Mis repositorios en GitHub"
+					: "My GitHub repositories"}
 			</a>
 		</main>
 	);

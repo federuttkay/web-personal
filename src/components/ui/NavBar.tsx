@@ -4,15 +4,23 @@ import { useState } from "react";
 import iconMenuOpen from "../../assets/images/icon-menu.svg";
 import iconMenuClose from "../../assets/images/icon-close-menu.svg";
 
-const NavBar = () => {
+interface Props {
+	language: string;
+}
+
+const NavBar = ({ language }: Props) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const menuItems = [
-		{ id: 1, label: "Principal", path: "/" },
+		{ id: 1, label: language === "es" ? "Principal" : "Home", path: "/" },
 		{ id: 2, label: "Portfolio", path: "/portfolio" },
 		{ id: 3, label: "CV", path: "/cv" },
 		{ id: 4, label: "GitHub", path: "/github" },
-		{ id: 5, label: "Contacto", path: "/contacto" },
+		{
+			id: 5,
+			label: language === "es" ? "Contacto" : "Contact",
+			path: "/contacto",
+		},
 	];
 
 	const location = useLocation();

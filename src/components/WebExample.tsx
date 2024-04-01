@@ -6,9 +6,17 @@ interface Props {
 	github: string;
 	image: string;
 	url: string;
+	language: string;
 }
 
-const WebExample = ({ title, description, github, image, url }: Props) => {
+const WebExample = ({
+	title,
+	description,
+	github,
+	image,
+	url,
+	language,
+}: Props) => {
 	return (
 		<section className="web grid">
 			<div className="web__content grid">
@@ -23,7 +31,7 @@ const WebExample = ({ title, description, github, image, url }: Props) => {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					Código en GitHub.
+					{language === "es" ? "Código en GitHub." : "GitHub code."}
 				</a>
 			</div>
 			<a href={url} target="_blank" rel="noopener noreferrer">
