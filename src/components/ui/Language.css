@@ -9,6 +9,10 @@
 	transition: color 200ms;
 }
 
+.lang-option:hover {
+	opacity: 0.75;
+}
+
 .lang-selected {
 	color: var(--clr-accent-dark);
 }
