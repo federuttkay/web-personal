@@ -46,7 +46,7 @@
 	border-bottom: 2px solid var(--clr-accent-light);
 }
 
-.nav__item.selected {
+.nav__item.active {
 	border-bottom: 2px solid var(--clr-accent);
 	color: black;
 }

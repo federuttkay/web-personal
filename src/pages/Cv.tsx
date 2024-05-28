@@ -1,4 +1,4 @@
-import cv from "/public/CV.pdf";
+import cv from "/CV.pdf?url";
 
 interface Props {
 	language: string;

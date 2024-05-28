@@ -1,16 +1,24 @@
 import NavBar from "../src/components/ui/NavBar";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, json } from "react-router-dom";
 import Home from "./pages/Home";
 import Cv from "./pages/Cv";
 import Demo from "./pages/Demo";
 import Github from "./pages/Github";
 import Contacto from "./pages/Contacto";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Language from "./components/ui/Language";
 
 function App() {
-	const [language, setLanguage] = useState("es");
+	let selectedLanguage = window.localStorage.getItem("langu");
+	if (!selectedLanguage || !["es", "en"].includes(selectedLanguage))
+		selectedLanguage = "es";
+
+	const [language, setLanguage] = useState(selectedLanguage);
+
+	useEffect(() => {
+		window.localStorage.setItem("langu", language);
+	}, [language]);
 
 	return (
 		<>

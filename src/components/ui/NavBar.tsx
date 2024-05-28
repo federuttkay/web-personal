@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
 import { useState } from "react";
 import iconMenuOpen from "../../assets/images/icon-menu.svg";
@@ -23,8 +23,6 @@ const NavBar = ({ language }: Props) => {
 		},
 	];
 
-	const location = useLocation();
-
 	return (
 		<nav className="nav flex flex-between">
 			<Link className="title-logo" to="/">
@@ -32,15 +30,14 @@ const NavBar = ({ language }: Props) => {
 			</Link>
 			<ul className={"nav__items" + (isMenuOpen ? " menu-open" : "")}>
 				{menuItems.map((item) => (
-					<li
-						className={
-							"nav__item" + (location.pathname === item.path ? " selected" : "")
-						}
-						key={item.id}
-					>
-						<Link to={item.path} onClick={() => setIsMenuOpen(false)}>
+					<li key={item.id}>
+						<NavLink
+							className="nav__item"
+							to={item.path}
+							onClick={() => setIsMenuOpen(false)}
+						>
 							{item.label}
-						</Link>
+						</NavLink>
 					</li>
 				))}
 			</ul>
