@@ -4,6 +4,7 @@ import imgAdviceGenerator from "../assets/images/advice-generator.jpg";
 import imgLandingPage from "../assets/images/landing-page.jpg";
 import imgFaqAccordion from "../assets/images/faq-accordion.jpg";
 import imgTimeTracker from "../assets/images/time-tracker.jpg";
+import imgECommerce from "../assets/images/e-commerce.jpg";
 
 interface Props {
 	language: string;
@@ -20,6 +21,18 @@ const Demo = ({ language }: Props) => {
 						: "The following examples have been developed based on exercises from the Front End Mentor website. Although the designs are obtained from that website, and as you will see the code is in English (referring mainly to the classes and function names), all of it was written by me. This is because the courses I have taken have always been in English, and since the tags of the elements are in English, I got used to writing the rest of the code in the same way."}
 				</p>
 			</div>
+			<WebExample
+				title="• E-Commerce Product Page"
+				description={
+					language === "es"
+						? "Reproducción en React de una product page, con funcionabilidad que permite agregar y quitar el producto del carro."
+						: "Reproduction in React of a product page, with functionality that allows adding and removing the product from the cart."
+				}
+				github="https://github.com/federuttkay/e-commerce"
+				image={imgECommerce}
+				url="https://e-commerce-federico.netlify.app/"
+				language={language}
+			/>
 			<WebExample
 				title="• URL Shortening App"
 				description={

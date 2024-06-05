@@ -1,12 +1,12 @@
 import NavBar from "../src/components/ui/NavBar";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Cv from "./pages/Cv";
 import Demo from "./pages/Demo";
 import Github from "./pages/Github";
 import Contacto from "./pages/Contacto";
-import { useEffect, useState } from "react";
 import Language from "./components/ui/Language";
 
 function App() {
