@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./NavBar.css";
 import { useState } from "react";
 import iconMenuOpen from "../../assets/images/icon-menu.svg";
@@ -23,10 +23,13 @@ const NavBar = ({ language }: Props) => {
 		},
 	];
 
+	const location = useLocation();
+	console.log(location.pathname);
+
 	return (
 		<nav className="nav flex flex-between">
 			<Link className="title-logo" to="/">
-				Federico Ruttkay
+				{location.pathname !== "/" && "Federico Ruttkay"}
 			</Link>
 			<ul className={"nav__items" + (isMenuOpen ? " menu-open" : "")}>
 				{menuItems.map((item) => (
