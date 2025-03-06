@@ -12,7 +12,7 @@ import Language from "./components/ui/Language";
 function App() {
 	let selectedLanguage = window.localStorage.getItem("langu");
 	if (!selectedLanguage || !["es", "en"].includes(selectedLanguage))
-		selectedLanguage = "es";
+		selectedLanguage = "en";
 
 	const [language, setLanguage] = useState(selectedLanguage);
 
